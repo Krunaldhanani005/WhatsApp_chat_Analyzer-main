@@ -7,10 +7,10 @@ def preprocess(data, device, time_format):
         if time_format == '12 hour':
             pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s[ap]m\s*-\s' # android
         elif time_format == '24 hour':
-            pattern = '\d{1,2}/\d{1,2}/\d{2},\s\d{1,2}:\d{2}\s*-\s' # android
+            pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s*-\s' # android
     elif device == 'iOS':
         if time_format == '12 hour':
-            pattern = '\[\d{1,2}/\d{1,2}/\d{2},\s\d{1,2}:\d{2}:\d{2}\s[AP]M\]\s*' # ios
+            pattern = '\[\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}:\d{2}\s[AP]M\]\s*' # ios
         elif time_format == '24 hour':
             pattern = '\[\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}:\d{2}\]\s*' # ios
 
