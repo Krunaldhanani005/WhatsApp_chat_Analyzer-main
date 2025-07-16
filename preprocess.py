@@ -42,13 +42,13 @@ def preprocess(data, device, time_format):
     # df['date'] = df['date'].str.replace('PM', 'pm', regex=False)
 
     if device == 'Android' and time_format == '12 hour':
-        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y, %I:%M %p -', errors='coerce')
+        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y, %I:%M %p -', errors='coerce')  #capital y for 4 numbers of year and small y  for 2 number of year
     elif device == 'Android' and time_format == '24 hour':
-        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y, %H:%M -', errors='coerce')
+        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y, %H:%M -', errors='coerce')
     elif device == 'iOS' and time_format == '12 hour':
-        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y, %I:%M:%S %p', errors='coerce', dayfirst=True)
+        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y, %I:%M:%S %p', errors='coerce', dayfirst=True)
     elif device == 'iOS' and time_format == '24 hour':
-        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%y, %H:%M:%S', errors='coerce', dayfirst=True)
+        df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y, %H:%M:%S', errors='coerce', dayfirst=True)
     
     
     # Process users and messages
