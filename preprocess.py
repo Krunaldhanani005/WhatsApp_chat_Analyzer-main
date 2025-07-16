@@ -5,7 +5,7 @@ def preprocess(data, device, time_format):
 
     if device == 'Android':
         if time_format == '12 hour':
-            pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s[ap]m\s*-\s' # android
+            pattern = r'\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s[ap]m\s*-\s' # android
         elif time_format == '24 hour':
             pattern = '\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}\s*-\s' # android
     elif device == 'iOS':
