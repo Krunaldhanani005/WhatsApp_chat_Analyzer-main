@@ -1,4 +1,4 @@
-click or copy&paste --> https://whatsappchatanalyzer-main-j8xltgpwwyzvbnf4nrqniw.streamlit.app/
+click or copy&paste --> https://whatsappchatanalyzer-maingit-sj2nggd696unmegdfgtzcl.streamlit.app/
 
 app.py
 The app.py file serves as the main application interface and controller for the project, built using the Streamlit library. It manages the user experience by handling file uploads and device/time format selection in the sidebar, controlling the overall layout with custom CSS, and offering a dropdown to choose between 'Overall' or individual user analysis.
